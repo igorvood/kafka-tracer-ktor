@@ -23,21 +23,16 @@ repositories {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-openapi:$ktor_version")
-    implementation("io.ktor:ktor-server-swagger:$ktor_version")
-    implementation("io.ktor:ktor-server-call-logging-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-metrics-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-metrics-micrometer-jvm:$ktor_version")
-    implementation("io.micrometer:micrometer-registry-prometheus:$prometeus_version")
-    implementation("io.ktor:ktor-server-content-negotiation-jvm:$ktor_version")
-    implementation("io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-compression-jvm:$ktor_version")
-    implementation("io.ktor:ktor-server-webjars-jvm:$ktor_version")
-    implementation("org.webjars:jquery:3.2.1")
-    implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
-    implementation("ch.qos.logback:logback-classic:$logback_version")
-    implementation("io.ktor:ktor-server-config-yaml:$ktor_version")
-    testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
+    implementation ("io.github.microutils:kotlin-logging:1.7.7")
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version")
+    implementation ("org.apache.kafka:kafka-clients:2.3.1")
+    implementation ("io.ktor:ktor-server-netty:$ktor_version")
+    implementation ("ch.qos.logback:logback-classic:$logback_version")
+    implementation ("io.ktor:ktor-server-core:$ktor_version")
+    implementation ("io.ktor:ktor-server-host-common:$ktor_version")
+    implementation ("io.ktor:ktor-jackson:$ktor_version")
+    implementation ("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.1")
+    testImplementation ("io.ktor:ktor-server-tests:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+
 }
