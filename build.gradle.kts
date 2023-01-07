@@ -6,7 +6,7 @@ val prometeus_version: String by project
 plugins {
     kotlin("jvm") version "1.8.0"
     id("io.ktor.plugin") version "2.2.2"
-    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0"
+//    id("org.jetbrains.kotlin.plugin.serialization") version "1.8.0"
 }
 
 group = "ru.vood"
@@ -20,6 +20,9 @@ application {
 
 repositories {
     mavenCentral()
+//    maven {
+//        url = uri("https://kotlin.bintray.com/ktor")
+//    }
 }
 
 dependencies {
@@ -30,9 +33,8 @@ dependencies {
     implementation ("ch.qos.logback:logback-classic:$logback_version")
     implementation ("io.ktor:ktor-server-core:$ktor_version")
     implementation ("io.ktor:ktor-server-host-common:$ktor_version")
-    implementation ("io.ktor:ktor-jackson:$ktor_version")
+//    implementation ("io.ktor:ktor-jackson:$ktor_version")
     implementation ("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.1")
     testImplementation ("io.ktor:ktor-server-tests:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
-
 }
